@@ -24,11 +24,10 @@ struct ContentView: View {
                         .padding(4)
                 }
                 
-                if self.viewModel.canLoadMore { //さらに読み込める場合
+                if self.viewModel.canLoadMore {
                     Text("Loading ...")
                         .padding()
                         .onAppear {
-                            //表示された時にさらに読み込む処理を行う
                             debugPrint("onAppear")
                             self.viewModel.loadMore()
                         }
